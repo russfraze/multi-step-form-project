@@ -1,0 +1,14 @@
+
+.steps{
+    display: flex;
+    height: 120px
+}
+
+.step{
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    background-color: brown;
+    color: pink;
+
+}
