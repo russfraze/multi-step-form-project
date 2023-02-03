@@ -2,8 +2,7 @@ import Steps from './Steps'
 
 function PersonalInfoForm() {
     return (
-        <>
-        <Steps />
+        
         <div>
             <h1>Personal info</h1>
             <p>Please provide your name, email address, and phone number.</p>
@@ -19,7 +18,7 @@ function PersonalInfoForm() {
                 <input type='tel' id='phone' placeholder='e.g. +1 234 567 890'/>
             </form>
         </div>
-        </>
+        
     )
 }
 
