@@ -11,6 +11,16 @@ export const FormProvider = ({children}) => {
         phone: ''
     }
 
+    const next = () => {
+        if (step === 4) {
+            setStep(1)
+            setPersonalInfo(personalInfoInitialState)
+            return
+        }
+
+        setStep(step + 1)
+    }
+
     const [personalInfo, setPersonalInfo] = useState(personalInfoInitialState)
 
     const [step, setStep]  = useState(1)
@@ -20,6 +30,7 @@ export const FormProvider = ({children}) => {
             value={{
                 step: step,
                 updateStep: setStep,
+                next: next,
 
             }} 
         >
