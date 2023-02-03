@@ -1,4 +1,5 @@
-function PickAddOns() {
+
+function PickAddons() {
     return (
         <div>
             
@@ -6,4 +7,4 @@ function PickAddOns() {
     )
 }
 
-export default PickAddOns
+export default PickAddons
