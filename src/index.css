@@ -93,5 +93,16 @@ h1 {
 }
 
 h2 {
+  font-size: 1rem;
+}
 
+p {
+  font-size: 1rem;
+  color: var(--clr-cool-grey);
+}
+
+/* utilities */
+
+.flexGroup {
+  display: flex;
 }

@@ -1,7 +1,7 @@
 import {useState, useContext} from 'react'
 import PersonalInfoForm from './PersonalInfoForm'
 import SelectPlanForm from './SelectPlanForm'
-import PickAddons from './PickAddons'
+import PickAddForm from './PickAddForm'
 import FinishUp from './FinishUp'
 import FormContext from '../context/FormContext'
 
@@ -15,7 +15,7 @@ function MultiStepForm() {
         <div>
             {step === 1 && <PersonalInfoForm /> || 
             step === 2 && <SelectPlanForm/>  || 
-            step === 3 && <PickAddons />  ||
+            step === 3 && <PickAddForm />  ||
             step === 4 && <FinishUp />
             }
            
