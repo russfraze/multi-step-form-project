@@ -11,6 +11,21 @@ export const FormProvider = ({children}) => {
         phone: ''
     }
 
+    const planInitialState = {
+        monthly: true
+    }
+
+    const addOnsInitialState = {
+        onlineService: false,
+        largerStorage: false,
+        customProfile: false
+    }
+
+    const [personalInfo, setPersonalInfo] = useState(personalInfoInitialState)
+    const [plan, setPlan] = useState(planInitialState)
+    const [addOns, setAddOns] = useState(addOnsInitialState)
+    console.log('from context',personalInfo)
+  
     const next = () => {
         if (step === 4) {
             setStep(1)
@@ -21,8 +36,6 @@ export const FormProvider = ({children}) => {
         setStep(step + 1)
     }
 
-    const [personalInfo, setPersonalInfo] = useState(personalInfoInitialState)
-
     const [step, setStep]  = useState(1)
 
     return (
@@ -31,6 +44,9 @@ export const FormProvider = ({children}) => {
                 step: step,
                 updateStep: setStep,
                 next: next,
+                setPersonalInfo: setPersonalInfo,
+                setPlan: setPlan,
+                setAddOns: setAddOns,
 
             }} 
         >
