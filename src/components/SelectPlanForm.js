@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import FormContext from '../context/FormContext'
 import Button from './UI/Button'
 import Card from './UI/Card'
@@ -7,8 +7,30 @@ import Switch from "react-switch";
 
 function SelectPlanForm() {
     const formCXT = useContext(FormContext)
+    const { next, setPlan } = formCXT
 
-    const { next } = formCXT
+    const [checked, setChecked] = useState(false)
+
+    const handleChange = () => {
+        if(!checked){
+            setChecked(true)
+        }
+        if(checked){
+            setChecked(false)
+        }
+        
+        
+        
+        console.log(checked)
+    }
+
+    const handleSubmit = () => {
+        setPlan({
+            yearly: checked
+        })
+        next()
+    }
+
     return (
         <div>
             <h1>Select your plan</h1>
@@ -54,13 +76,13 @@ function SelectPlanForm() {
             <Card>
                 <h2>Monthly</h2>
                 <label>
-                    <Switch />
+                    <Switch onChange={handleChange} checked={checked}/>
                 </label>
                 <h2>Yearly</h2>
             </Card>
 
             <div>
-                <p>Go Back</p> <Button onClick={next}>Next Step</Button>
+                <p>Go Back</p> <Button onClick={handleSubmit}>Next Step</Button>
             </div>
         </div>
     )

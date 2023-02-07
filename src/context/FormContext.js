@@ -12,7 +12,7 @@ export const FormProvider = ({children}) => {
     }
 
     const planInitialState = {
-        monthly: true
+        yearly: false
     }
 
     const addOnsInitialState = {
@@ -24,7 +24,7 @@ export const FormProvider = ({children}) => {
     const [personalInfo, setPersonalInfo] = useState(personalInfoInitialState)
     const [plan, setPlan] = useState(planInitialState)
     const [addOns, setAddOns] = useState(addOnsInitialState)
-    console.log('from context',personalInfo)
+    console.log('from context',personalInfo, plan, addOns)
   
     const next = () => {
         if (step === 4) {

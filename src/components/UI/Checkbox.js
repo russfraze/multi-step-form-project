@@ -1,16 +1,28 @@
 import {ReactComponent as CheckMark} from '../../assets/icon-checkmark.svg'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import styles from '../UI/Checkbox.module.css'
+import React from 'react'
 
 
 
-function Checkbox() {
+
+const Checkbox = ({setBool}) => {
     const [checked, setChecked] = useState(false)
+
+    useEffect(() => {
+        setBool(checked)
+    },[checked])
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        setChecked(!checked)
+        
+    } 
 
     const checkBoxStyles = `${styles.checkbox} ${checked ? styles.boxChecked : ''}`
     return (
         <div className={checkBoxStyles}>
-            <CheckMark onClick={() => setChecked(!checked)}/>
+            <CheckMark onClick={handleSubmit}/>
         </div>
     )
 }
