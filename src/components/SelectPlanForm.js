@@ -36,7 +36,7 @@ function SelectPlanForm() {
             <h1>Select your plan</h1>
             <p>You have the option of monthly or yearly billing.</p>
 
-            <Card>
+            <Card outlined={true} selectable={true}>
                 <div className='flexGroup'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
                         <g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#FFAF7E" />
@@ -49,7 +49,7 @@ function SelectPlanForm() {
                 </div>
             </Card>
 
-            <Card>
+            <Card outlined={true}>
                 <div className='flexGroup'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
                         <g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#F9818E" />
@@ -61,7 +61,7 @@ function SelectPlanForm() {
                 </div>
             </Card>
 
-            <Card>
+            <Card outlined={true}>
                 <div className='flexGroup'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
                         <g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#483EFF" />

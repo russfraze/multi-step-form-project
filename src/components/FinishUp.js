@@ -8,7 +8,8 @@ function FinishUp() {
     const {next} = formCTX
     return (
         <div>
-            <h1>Finish up</h1>
+            <h1>Finishing up</h1>
+            <p>Double check everything looks OK before confirming.</p>
             <Button onClick={next}>Confirm</Button>
         </div>
     )
