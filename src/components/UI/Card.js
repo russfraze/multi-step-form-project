@@ -1,8 +1,14 @@
 import styles from './Card.module.css'
-import {useState} from 'react'
+import {useState, useContext, useEffect} from 'react'
+import FormContext from '../../context/FormContext'
 
-function Card({children, outlined, selectable}) {
+function Card({children, outlined, selectable, id}) {
     const [selected, setSelected] = useState(false)
+    const formCXT = useContext(FormContext)
+
+    const {setPlan} = formCXT
+
+    const planId = id
 
     const toggleSelected = () => {
         if(!selected){
@@ -13,10 +19,17 @@ function Card({children, outlined, selectable}) {
     } 
     
     const handleClick = () => {
+        // console.log('in handle click',planId)
         selectable && toggleSelected()
+        
     }
 
-    console.log(selected)
+    useEffect(() => {
+        setPlan((prevState) => ({
+            ...prevState,
+            planChoice: planId
+        }))
+    },[selected])
 
     return (
         <div 

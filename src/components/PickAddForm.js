@@ -9,7 +9,8 @@ import Checkbox from '../components/UI/Checkbox'
 function PickAddForm() {
     const formCTX = useContext(FormContext)
 
-    const { next, setAddOns } = formCTX
+    const { next, setAddOns, plan } = formCTX
+    
 
     const [onlineService, setOnlineService] = useState(false)
     const [largerStorage, setLargerStorage] = useState(false)
@@ -38,7 +39,7 @@ function PickAddForm() {
                     <h2>Online service</h2>
                     <p>Access to multiplayer games</p>
                 </div>
-                <p>+$1/mo</p>
+                {plan.yearly ? <p>+$10/yr</p> : <p>+$1/mo</p>}
             </div>
             <div className={styles.addOn}>
                 <Checkbox setBool={setLargerStorage}/>
@@ -46,7 +47,7 @@ function PickAddForm() {
                     <h2>Larger storage</h2>
                     <p>Extra 1TB of cloud save</p>
                 </div>
-                <p>+$2/mo</p>
+                {plan.yearly ? <p>+$20/yr</p> : <p>+$2/mo</p>}
             </div>
             <div className={styles.addOn}>
                 <Checkbox setBool={setCustomProfile}/>
@@ -54,7 +55,7 @@ function PickAddForm() {
                     <h2>Customizable profile</h2>
                     <p>Custom theme on your profile</p>
                 </div>
-                <p>+$2/mo</p>
+                {plan.yearly ? <p>+$20/yr</p> : <p>+$2/mo</p>}
             </div>
 
 
