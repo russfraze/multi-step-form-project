@@ -5,7 +5,7 @@ import Button from './UI/Button'
 function FinishUp() {
     const formCTX = useContext(FormContext)
 
-    const {next, plan, addOns, planCost} = formCTX
+    const {next, plan, addOns, planCost, total} = formCTX
 
     const planTotal = planCost()
     console.log('from fishis', planTotal)
@@ -30,6 +30,7 @@ function FinishUp() {
 
 
             <p>Total (per month)</p>
+            <p>{total}</p>
 
             <Button onClick={next}>Confirm</Button>
         </div>

@@ -54,7 +54,7 @@ export const FormProvider = ({children}) => {
   
     const [step, setStep]  = useState(1)
     const next = () => {
-        if (step === 4) {
+        if (step === 5) {
             setStep(1)
             setPersonalInfo(personalInfoInitialState)
             return
@@ -63,7 +63,7 @@ export const FormProvider = ({children}) => {
         setStep(step + 1)
     }
 
-    
+    const prev = () => setStep(step - 1)
 
     const getPlanTotal = () => {
         let planCost = ''
@@ -85,52 +85,8 @@ export const FormProvider = ({children}) => {
 
         }
            
-        return planCost
+       
     }
-
-    const totalPerMonth = () => {
-        let planTotal = 0
-        let addOnsTotal = 0
-        let monthlyTotal = 0
-
-        if(!plan.yearly && plan.planChoice === 'arcade'){
-            planTotal += 9
-        }
-        if(plan.yearly && plan.planChoice === 'arcade'){
-            planTotal += 90
-        }
-        if(!plan.yearly && plan.planChoice === 'advanced'){
-            planTotal += 12
-        }
-        if(plan.yearly && plan.planChoice === 'advanced'){
-            planTotal += 120
-        }
-        if(!plan.yearly && plan.planChoice === 'pro'){
-            planTotal += 15
-        }
-        if(plan.yearly && plan.planChoice === 'pro'){
-            planTotal += 150
-        }
-
-        if(addOns.onlineService){
-            plan.yearly ? planTotal += 10 : planTotal += 1
-        }
-
-        if(addOns.largerStorage){
-            plan.yearly ? planTotal += 120 : planTotal += 12
-        }
-
-        if(addOns.customProfile){
-            plan.yearly ? planTotal += 150 : planTotal += 15
-        }
-
-        
-            
-        return planTotal        
-        
-    }
-
-    console.log('from context this is total', totalPerMonth())
 
 
     const getPlanValue = () => {
@@ -158,6 +114,7 @@ export const FormProvider = ({children}) => {
     }
 
     console.log('plan value form conext', getPlanValue())
+    let x = getPlanValue()
 
     const getAddOnsTotal = () => {
         let total = 0
@@ -182,9 +139,10 @@ export const FormProvider = ({children}) => {
     console.log('get add ons from COnt',  getAddOnsTotal())
 
 
+    let y = getAddOnsTotal() 
 
-
-
+    let monthlyTotal = x + y
+    console.log('for all the marmalade', monthlyTotal )
     
     
 
@@ -194,6 +152,7 @@ export const FormProvider = ({children}) => {
                 step: step,
                 updateStep: setStep,
                 next: next,
+                prev: prev,
                 setPersonalInfo: setPersonalInfo,
                 personalInfo: personalInfo,
                 setPlan: setPlan,
@@ -202,6 +161,7 @@ export const FormProvider = ({children}) => {
                 addOns: addOns,
                 planCost: getPlanTotal,
                 addOnsCost: getAddOnsTotal,
+                total: monthlyTotal,
 
             }} 
         >

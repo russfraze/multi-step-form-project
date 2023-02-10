@@ -7,7 +7,7 @@ import Switch from "react-switch";
 
 function SelectPlanForm() {
     const formCXT = useContext(FormContext)
-    const { next, setPlan } = formCXT
+    const { next, prev, setPlan } = formCXT
     
 
     const [checked, setChecked] = useState(false)
@@ -88,7 +88,7 @@ function SelectPlanForm() {
             </Card>
 
             <div>
-                <p>Go Back</p> <Button onClick={handleSubmit}>Next Step</Button>
+                <p onClick={prev}>Go Back</p> <Button onClick={handleSubmit}>Next Step</Button>
             </div>
         </div>
     )

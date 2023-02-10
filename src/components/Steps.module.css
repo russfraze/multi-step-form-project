@@ -18,3 +18,9 @@
     font-weight: var(--fw-bold);
 }
 
+
+.selected {
+    background-color: var(--clr-light-blue);
+    color: var(--clr-marine-blue);
+}
+
