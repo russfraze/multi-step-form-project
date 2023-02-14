@@ -1,19 +1,7 @@
-
-.addOn {
-    display: flex;
-    align-content: space-between;
-    gap: 1rem;
-}
-
-.addOnSelected {
-    border: 1px;
-    border-color: crimson;
-}
-
-
 .navBar{
     display: flex;
     justify-content: space-between;
+    
 
     position: fixed;
     width: 100vw;
@@ -21,4 +9,3 @@
     background-color: var(--clr-white);
     padding: 1rem;
 }
-

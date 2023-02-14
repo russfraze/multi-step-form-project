@@ -106,3 +106,35 @@ p {
 .flexGroup {
   display: flex;
 }
+
+.flexGroup__col {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border-radius: 0.5rem;
+  border: 1px solid;
+  border-color: var(--clr-cool-grey);
+  padding: 0.5rem 1rem;
+  font-weight: var(--fw-bold);
+  font-size: 1.1rem;
+  color: var(--clr-cool-grey);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--clr-cool-grey);
+}
+
+label {
+  color: var(--clr-marine-blue);
+}
+
+button {
+  color: var(--clr-pastel-blue);
+  background-color: var(--clr-marine-blue);
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-weight: var(--fw-bold);
+}

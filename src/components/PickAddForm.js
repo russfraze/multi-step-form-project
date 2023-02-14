@@ -9,8 +9,8 @@ import Checkbox from '../components/UI/Checkbox'
 function PickAddForm() {
     const formCTX = useContext(FormContext)
 
-    const { next, setAddOns, plan } = formCTX
-    
+    const { next, prev, setAddOns, plan } = formCTX
+
 
     const [onlineService, setOnlineService] = useState(false)
     const [largerStorage, setLargerStorage] = useState(false)
@@ -29,37 +29,41 @@ function PickAddForm() {
     console.log(onlineService)
     return (
         <div>
-            <h1>Pick add ons</h1>
-            <p>Add-ons help enhance your gaming experience.</p>
+            <Card shadow={true}>
+                <h1>Pick add ons</h1>
+                <p>Add-ons help enhance your gaming experience.</p>
 
 
-            <div className={styles.addOn}>
-                <Checkbox setBool={setOnlineService}/>
-                <div>
-                    <h2>Online service</h2>
-                    <p>Access to multiplayer games</p>
+                <div className={styles.addOn}>
+                    <Checkbox setBool={setOnlineService} />
+                    <div>
+                        <h2>Online service</h2>
+                        <p>Access to multiplayer games</p>
+                    </div>
+                    {plan.yearly ? <p>+$10/yr</p> : <p>+$1/mo</p>}
                 </div>
-                {plan.yearly ? <p>+$10/yr</p> : <p>+$1/mo</p>}
-            </div>
-            <div className={styles.addOn}>
-                <Checkbox setBool={setLargerStorage}/>
-                <div>
-                    <h2>Larger storage</h2>
-                    <p>Extra 1TB of cloud save</p>
+                <div className={styles.addOn}>
+                    <Checkbox setBool={setLargerStorage} />
+                    <div>
+                        <h2>Larger storage</h2>
+                        <p>Extra 1TB of cloud save</p>
+                    </div>
+                    {plan.yearly ? <p>+$20/yr</p> : <p>+$2/mo</p>}
                 </div>
-                {plan.yearly ? <p>+$20/yr</p> : <p>+$2/mo</p>}
-            </div>
-            <div className={styles.addOn}>
-                <Checkbox setBool={setCustomProfile}/>
-                <div>
-                    <h2>Customizable profile</h2>
-                    <p>Custom theme on your profile</p>
+                <div className={styles.addOn}>
+                    <Checkbox setBool={setCustomProfile} />
+                    <div>
+                        <h2>Customizable profile</h2>
+                        <p>Custom theme on your profile</p>
+                    </div>
+                    {plan.yearly ? <p>+$20/yr</p> : <p>+$2/mo</p>}
                 </div>
-                {plan.yearly ? <p>+$20/yr</p> : <p>+$2/mo</p>}
+            </Card>
+
+            <div className={styles.navBar}>
+
+                <p onClick={prev}>Go Back</p> <Button onClick={handleSubmit}>Next Step</Button>
             </div>
-
-
-            <Button onClick={handleSubmit}>Next Step</Button>
         </div>
     )
 }

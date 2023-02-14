@@ -1,17 +1,17 @@
-import Card from './components/UI/Card'
+import styles from './App.module.css'
 import Steps from './components/Steps'
 import MultiStepForm from './components/MultiStepForm'
-import {FormProvider} from './context/FormContext'
+import { FormProvider } from './context/FormContext'
 
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.body}>
       <FormProvider>
         <Steps />
-        <Card>
-          <MultiStepForm />
-        </Card>
+
+        <MultiStepForm />
+
       </FormProvider>
     </div>
   );

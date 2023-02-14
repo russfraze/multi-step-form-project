@@ -1,0 +1,6 @@
+.multiForm {
+    display: grid;
+    place-content: center;
+    
+    max-width: 600px;
+}
