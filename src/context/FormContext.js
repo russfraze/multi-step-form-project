@@ -14,13 +14,6 @@ export const FormProvider = ({ children }) => {
     const planInitialState = {
         planChoice: null,
         yearly: false,
-        arcadeMoCost: 9,
-        arcadeYrCost: 90,
-        advancedMoCost: 12,
-        advancedYrCost: 120,
-        proMoCost: 15,
-        proYrCost: 150,
-
     }
 
     const plansInitialState = [
@@ -99,6 +92,26 @@ export const FormProvider = ({ children }) => {
 
     const prev = () => setStep(step - 1)
 
+
+    const planChoice = plans.filter((plan) => plan.selected === true)
+
+    const getPlanTotal = () => {
+        console.log('plan choince from context',planChoice)
+        let planCost = 0
+        console.log( 'pllllll',plan.yearly)
+        if(plan.yearly){
+            planCost = planChoice[0].costYr
+        } else {
+            planCost = planChoice[0].costMo
+        }
+        console.log('plan Cost baby', planCost)
+        return planCost
+    }
+
+    
+
+
+
     // const getPlanTotal = () => {
     //     let planCost = ''
     //     switch (plan.planChoice, plan.yearly) {
@@ -150,33 +163,31 @@ export const FormProvider = ({ children }) => {
     // console.log('plan value form conext', getPlanValue())
     // let x = getPlanValue()
 
-    // const getAddOnsTotal = () => {
-    //     let total = 0
+    const getAddOnsTotal = () => {
+        let total = 0
 
-    //     if (addOns.onlineService) {
-    //         plan.yearly ? total += 10 : total += 1
-    //     }
+        if (addOns.onlineService) {
+            plan.yearly ? total += 10 : total += 1
+        }
 
-    //     if (addOns.largerStorage) {
-    //         plan.yearly ? total += 20 : total += 2
-    //     }
+        if (addOns.largerStorage) {
+            plan.yearly ? total += 20 : total += 2
+        }
 
-    //     if (addOns.customProfile) {
-    //         plan.yearly ? total += 20 : total += 2
-    //     }
-
-
-    //     return total
-
-    // }
-
-    // console.log('get add ons from COnt', getAddOnsTotal())
+        if (addOns.customProfile) {
+            plan.yearly ? total += 20 : total += 2
+        }
 
 
-    // let y = getAddOnsTotal()
+        return total
 
-    // let monthlyTotal = x + y
-    // console.log('for all the marmalade', monthlyTotal)
+    }
+
+    console.log('get add ons from COnt', getAddOnsTotal())
+
+
+    
+    
 
 
 
@@ -194,8 +205,11 @@ export const FormProvider = ({ children }) => {
                 plansInitialState: plansInitialState,
                 setPlans: setPlans,
                 plans: plans,
+                planChoice: planChoice,
                 setAddOns: setAddOns,
                 addOns: addOns,
+                getPlanTotal: getPlanTotal,
+                getAddOnsTotal: getAddOnsTotal,
 
             }}
         >

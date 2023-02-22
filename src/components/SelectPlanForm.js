@@ -9,7 +9,7 @@ import styles from './SelectPlanForm.module.css'
 
 function SelectPlanForm() {
     const formCXT = useContext(FormContext)
-    const { next, prev, setPlan, planChoice } = formCXT
+    const { next, prev, setPlan, getPlanTotal } = formCXT
 
 
     const [checked, setChecked] = useState(false)
@@ -31,6 +31,7 @@ function SelectPlanForm() {
             ...prevState,
             yearly: checked,
         }))
+        getPlanTotal()
         next()
     }
 

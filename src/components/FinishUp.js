@@ -7,11 +7,11 @@ import styles from './FinishUp.module.css'
 function FinishUp() {
     const formCTX = useContext(FormContext)
 
-    const { next, plan, addOns, planCost, total } = formCTX
-
-    const planTotal = planCost()
-    console.log('from fishis', planTotal)
-
+    const { next, plan, addOns, planChoice, getPlanTotal, getAddOnsTotal } = formCTX
+    const chosenPlan = planChoice[0].name
+    const planTotal = getPlanTotal()
+    const addOnsTotal = getAddOnsTotal()
+    const monthlyTotal = planTotal + addOnsTotal
 
     return (
         <div>
@@ -20,7 +20,7 @@ function FinishUp() {
                 <p>Double check everything looks OK before confirming.</p>
 
                 <div className={styles.reviewPanel}>
-                    <p>{`${plan.planChoice} ${plan.yearly ? '(Yearly)' : '(Monthly)'} `}</p>
+                    <p>{`${chosenPlan} ${plan.yearly ? '(Yearly)' : '(Monthly)'} `}</p>
                     <p>{planTotal}</p>
 
 
@@ -35,7 +35,7 @@ function FinishUp() {
                 </div>
 
                 <p>Total (per month)</p>
-                <p>{total}</p>
+                <p>{monthlyTotal}</p>
             </Card>
             <div className={styles.navBar}>
                 <Button onClick={next}>Confirm</Button>

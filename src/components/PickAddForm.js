@@ -27,6 +27,7 @@ function PickAddForm() {
         next()
     }
     console.log(onlineService)
+    
     return (
         <div>
             <Card shadow={true}>
