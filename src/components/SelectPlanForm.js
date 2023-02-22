@@ -2,13 +2,14 @@ import { useContext, useState } from 'react'
 import FormContext from '../context/FormContext'
 import Button from './UI/Button'
 import Card from './UI/Card'
-import Switch from "react-switch";
+import PlanList from './PlanList'
+import Switch from "react-switch"
 import styles from './SelectPlanForm.module.css'
 
 
 function SelectPlanForm() {
     const formCXT = useContext(FormContext)
-    const { next, prev, setPlan } = formCXT
+    const { next, prev, setPlan, planChoice } = formCXT
 
 
     const [checked, setChecked] = useState(false)
@@ -22,11 +23,13 @@ function SelectPlanForm() {
             setChecked(false)
         }
     }
+    console.log(checked)
+
 
     const handleSubmit = () => {
         setPlan((prevState) => ({
             ...prevState,
-            yearly: checked
+            yearly: checked,
         }))
         next()
     }
@@ -41,7 +44,9 @@ function SelectPlanForm() {
                 <h1>Select your plan</h1>
                 <p>You have the option of monthly or yearly billing.</p>
 
-                <Card outlined={true} selectable={true} id='arcade'>
+                <PlanList yearly={checked}/>
+
+                {/* <Card outlined={true} selectable={true} id='arcade'>
                     <div className='flexGroup'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
                             <g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#FFAF7E" />
@@ -79,9 +84,10 @@ function SelectPlanForm() {
                             {checked && <p>2 months free</p>}
                         </div>
                     </div>
-                </Card>
+                </Card> */}
 
-                <Card>
+
+                <Card className={styles.switchCard}>
                     <h2>Monthly</h2>
                     <label>
                         <Switch onChange={handleChange} checked={checked} />
@@ -94,6 +100,7 @@ function SelectPlanForm() {
             <div className={styles.navBar}>
                 <p onClick={prev}>Go Back</p> <Button onClick={handleSubmit}>Next Step</Button>
             </div>
+
         </div>
     )
 }

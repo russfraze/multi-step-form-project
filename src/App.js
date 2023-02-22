@@ -11,7 +11,6 @@ function App() {
         <Steps />
 
         <MultiStepForm />
-
       </FormProvider>
     </div>
   );

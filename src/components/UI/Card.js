@@ -1,45 +1,42 @@
 import styles from './Card.module.css'
-import {useState, useContext, useEffect} from 'react'
+import { useState, useContext, useEffect } from 'react'
 import FormContext from '../../context/FormContext'
 
-function Card({children, outlined, selectable, id, shadow}) {
-    const [selected, setSelected] = useState(false)
-    const formCXT = useContext(FormContext)
-
-    const {setPlan} = formCXT
-
-    const planId = id
-
-    const toggleSelected = () => {
-        if(!selected){
-            setSelected(true)
-        } else { 
-            setSelected(false)
-        }
-    } 
+function Card({ children, outlined, selectable, id, index, shadow, selected }) {
     
+    const formCXT = useContext(FormContext)
+    const { setPlans, plans, plansInitialState } = formCXT
+
+
+    // plans.forEach((plan) => {
+    //     if(plan.name != id){
+    //         console.log('nuts',plan.name)
+    //     }
+    // })
+    
+
     const handleClick = () => {
-        // console.log('in handle click',planId)
-        selectable && toggleSelected()
+
         
+        if(selectable){
+
+
+            let newPlansData = [...plansInitialState]
+            newPlansData[index] = {...newPlansData[index], selected: !newPlansData[index].selected}
+            // newPlansData[!index] = {...!newPlansData[index], selected: false}
+            
+            setPlans(newPlansData)
+        }
+       
     }
 
-    useEffect(() => {
-        setPlan((prevState) => ({
-            ...prevState,
-            planChoice: planId
-        }))
-    },[selected])
+ 
 
     return (
-        <div 
-        onClick={handleClick} 
-        className={`${styles.card} 
-        ${outlined ? styles.outline : ''}
-        ${selected ? styles.selected : ''}
-        ${shadow ? styles.dropShadow : ''}
-        `}
-        >
+        <div onClick={handleClick}
+        className={`${styles.card} ${selected ? styles.selected : ''}`}>
+             
+       
             {children}
         </div>
     )
