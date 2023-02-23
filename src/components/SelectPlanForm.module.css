@@ -10,3 +10,15 @@
     padding: 1rem;
 }
 
+.switchCard {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--clr-alabaster);
+    
+}
+
+
+.switchCard h2 {
+    font-size: 0.90rem;
+    font-weight: var(--fw-medium);
+}

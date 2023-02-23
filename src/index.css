@@ -83,17 +83,19 @@ body {
   font-family: var(--ff-base);
   font-weight: var(--fw-regular);
 
-  background-color: var(--clr-alabaster);
+  background-color: var(--clr-magnolia);
   background-image: url('/Users/clairegill/Desktop/multi-step-form/src/assets/bg-sidebar-mobile.svg');
   background-repeat: no-repeat;
 }
 
 h1 {
   font-size: 1.5rem;
+  color: var(--clr-marine-blue)
 }
 
 h2 {
   font-size: 1rem;
+  color: var(--clr-marine-blue)
 }
 
 p {
@@ -105,6 +107,7 @@ p {
 
 .flexGroup {
   display: flex;
+  
 }
 
 .flexGroup__col {
@@ -124,17 +127,28 @@ input {
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--clr-cool-grey);
+  font-size: 0.95rem;
+  font-weight: var(--fw-medium);
 }
 
 label {
   color: var(--clr-marine-blue);
+  font-size: 0.75rem;
+  font-weight: var(--fw-medium);
 }
 
 button {
-  color: var(--clr-pastel-blue);
+  color: var(--clr-white);
   background-color: var(--clr-marine-blue);
   border: none;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
   font-weight: var(--fw-bold);
+}
+
+
+button:hover,
+button:active
+{
+  background-color: var(--clr-pastel-blue);
 }

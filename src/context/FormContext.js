@@ -111,58 +111,6 @@ export const FormProvider = ({ children }) => {
     
 
 
-
-    // const getPlanTotal = () => {
-    //     let planCost = ''
-    //     switch (plan.planChoice, plan.yearly) {
-    //         case plan.planChoice === 'arcade' && !plan.yearly:
-    //             return planCost = '$9/mo'
-    //         case plan.planChoice === 'arcade' && plan.yearly:
-    //             return planCost = '$90/yr'
-    //         case plan.planChoice === 'advanced' && !plan.yearly:
-    //             return planCost = '$12/mo'
-    //         case plan.planChoice === 'advanced' && plan.yearly:
-    //             return planCost = '$120/yr'
-    //         case plan.planChoice === 'pro' && !plan.yearly:
-    //             return planCost = '$15/mo'
-    //         case plan.planChoice === 'pro' && plan.yearly:
-    //             return planCost = '$150/yr'
-    //         default: return null
-
-
-    //     }
-
-
-    // }
-
-
-    // const getPlanValue = () => {
-    //     let planValue = 0
-
-    //     switch (plan.planChoice, plan.yearly) {
-    //         case plan.planChoice === 'arcade' && !plan.yearly:
-    //             return planValue = 9
-    //         case plan.planChoice === 'arcade' && plan.yearly:
-    //             return planValue = 90
-    //         case plan.planChoice === 'advanced' && !plan.yearly:
-    //             return planValue = 12
-    //         case plan.planChoice === 'advanced' && plan.yearly:
-    //             return planValue = 120
-    //         case plan.planChoice === 'pro' && !plan.yearly:
-    //             return planValue = 15
-    //         case plan.planChoice === 'pro' && plan.yearly:
-    //             return planValue = 150
-    //         default: return planValue
-
-
-    //     }
-
-
-    // }
-
-    // console.log('plan value form conext', getPlanValue())
-    // let x = getPlanValue()
-
     const getAddOnsTotal = () => {
         let total = 0
 

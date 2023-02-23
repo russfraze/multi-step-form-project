@@ -34,7 +34,7 @@ function Card({ children, outlined, selectable, id, index, shadow, selected }) {
 
     return (
         <div onClick={handleClick}
-        className={`${styles.card} ${selected ? styles.selected : ''}`}>
+        className={`${styles.card} ${selected ? styles.selected : ''} ${outlined ? styles.outline : ''} ${selectable ? styles.clickable : ''}`}>
              
        
             {children}
