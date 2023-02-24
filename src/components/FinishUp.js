@@ -23,15 +23,15 @@ function FinishUp() {
                     <p>{`${chosenPlan} ${plan.yearly ? '(Yearly)' : '(Monthly)'} `}</p>
                     <p>{planTotal}</p>
 
+                    
+                    {addOns[0].selected ? <p>Online service</p> : ''}
+                    {addOns[0].selected && <p>{plan.yearly ? '$10/yr' : '$1/mo'}</p>}
 
-                    {addOns.onlineService ? <p>Online service</p> : ''}
-                    {addOns.onlineService && <p>{plan.yearly ? '$10/yr' : '$1/mo'}</p>}
+                    {addOns[1].selected ? <p>Larger storage</p> : ''}
+                    {addOns[1].selected && <p>{plan.yearly ? '$20/yr' : '$2/mo'}</p>}
 
-                    {addOns.largerStorage ? <p>Larger storage</p> : ''}
-                    {addOns.largerStorage && <p>{plan.yearly ? '$20/yr' : '$2/mo'}</p>}
-
-                    {addOns.customProfile ? <p>Custom profile</p> : ''}
-                    {addOns.customProfile && <p>{plan.yearly ? '$20/yr' : '$2/mo'}</p>}
+                    {addOns[2].selected ? <p>Custom profile</p> : ''}
+                    {addOns[2].selected && <p>{plan.yearly ? '$20/yr' : '$2/mo'}</p>}
                 </div>
 
                 <p>Total (per month)</p>

@@ -50,7 +50,16 @@ function SelectPlanForm() {
                 <div className={styles.switchCard}>
                     <h2>Monthly</h2>
                     <label>
-                        <Switch onChange={handleChange} checked={checked} />
+                        <Switch 
+                        onChange={handleChange} 
+                        checked={checked} 
+                        onColor={'#02295a'} 
+                        offColor={'#02295a'} 
+                        checkedIcon={false} 
+                        uncheckedIcon={false}
+                        
+                        handleDiameter={14}
+                        />
                     </label>
                     <h2>Yearly</h2>
                 </div>

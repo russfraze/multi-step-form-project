@@ -10,27 +10,6 @@ function AddOnItem(props) {
     const { plan, setAddOns, addOns } = formCTX
     const [checked, setChecked] = useState(false)
 
-    // useEffect(() => {
-    //     setChecked(() => !checked)
-    //     console.log('inside the effect',checked)
-    //     let index = props.index
-    //     console.log('mothafka',index)
-    //     let newAddOnsData = [...addOns]
-    //     newAddOnsData[index] = {...newAddOnsData[index], selected: !newAddOnsData[index].selected}
-    //     setAddOns(newAddOnsData)
-    // },[])
-
-
-    
-    // const onCheck = () => {
-    //     const isSelected = addOns[props.index].selected
-    //     let index = props.index
-    //     console.log('mothafka',index)
-    //     let newAddOnsData = [...addOns]
-    //     newAddOnsData[index] = {...newAddOnsData[index], selected: !newAddOnsData[index].selected}
-    //     setAddOns(newAddOnsData)
-    //     console.log('index the item', props.index)
-    // }
 
     const handleCheck = () => {
         let currentIndex = props.index
@@ -45,7 +24,7 @@ function AddOnItem(props) {
     console.log('checked from the item', checked)
 
     return (
-        <Card addOn={true} outlined={true} checked={checked}>
+        <Card addOn={true} outlined={true} checked={checked} selected={checked ? true : false}>
             <div className={`${styles.addOn} ${'flexGroup'}`}>
                 <Checkbox setChecked={setChecked} checked={checked} onCheck={handleCheck} />
                 <div>

@@ -20,11 +20,11 @@ function PickAddForm() {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        setAddOns({
-            onlineService: onlineService,
-            largerStorage: largerStorage,
-            customProfile: customProfile
-        })
+        // setAddOns({
+        //     onlineService: onlineService,
+        //     largerStorage: largerStorage,
+        //     customProfile: customProfile
+        // })
         next()
     }
     console.log(onlineService)
