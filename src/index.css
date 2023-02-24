@@ -86,6 +86,7 @@ body {
   background-color: var(--clr-magnolia);
   background-image: url('/Users/clairegill/Desktop/multi-step-form/src/assets/bg-sidebar-mobile.svg');
   background-repeat: no-repeat;
+  background-size: 100vw;
 }
 
 h1 {
@@ -98,6 +99,12 @@ h2 {
   color: var(--clr-marine-blue)
 }
 
+h3 {
+  font-size: 0.75rem;
+  font-weight: var(--fw-regular);
+  color: var(--clr-marine-blue)
+}
+
 p {
   font-size: 1rem;
   color: var(--clr-cool-grey);
@@ -107,7 +114,8 @@ p {
 
 .flexGroup {
   display: flex;
-  
+  gap: 1rem;
+  align-items: center;
 }
 
 .flexGroup__col {

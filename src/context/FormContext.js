@@ -55,18 +55,21 @@ export const FormProvider = ({ children }) => {
             name: 'onlineService',
             priceMo: 1,
             priceYr: 10,
+            description: 'access to multiplayer games',
             selected: false,
         },
         {
             name: 'largerStorage',
             priceMo: 2,
             priceYr: 20,
+            description: 'Extra 1TB of cloud save',
             selected: false,
         },
         {
             name: 'customProfile',
             priceMo: 2,
             priceYr: 20,
+            description: 'Custom theme on your profile',
             selected: false,
         },
     ]

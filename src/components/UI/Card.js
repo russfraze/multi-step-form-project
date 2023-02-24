@@ -2,7 +2,7 @@ import styles from './Card.module.css'
 import { useState, useContext, useEffect } from 'react'
 import FormContext from '../../context/FormContext'
 
-function Card({ children, outlined, selectable, id, index, shadow, selected }) {
+function Card({ children, outlined, selectable, id, index, shadow, selected, addOn }) {
     
     const formCXT = useContext(FormContext)
     const { setPlans, plans, plansInitialState } = formCXT
@@ -34,7 +34,13 @@ function Card({ children, outlined, selectable, id, index, shadow, selected }) {
 
     return (
         <div onClick={handleClick}
-        className={`${styles.card} ${selected ? styles.selected : ''} ${outlined ? styles.outline : ''} ${selectable ? styles.clickable : ''}`}>
+        className={`
+        ${styles.card} 
+        ${selected ? styles.selected : ''} 
+        ${outlined ? styles.outline : ''} 
+        ${selectable ? styles.clickable : ''}
+        ${addOn ? styles.addOn : ''}
+        `}>
              
        
             {children}

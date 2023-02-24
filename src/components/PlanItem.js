@@ -11,7 +11,7 @@ function PlanItem({ name, yearly, icon, costMo, costYr, id, index, selected }) {
                     {yearly ? <p>{`$${costYr}${'/yr'}`}</p> : <p>{`$${costMo}${'/mo'}`}</p>}
 
                     
-
+                    {yearly ? <h3>2 months free</h3> : ''}
                     
                 </div>
             </div>
