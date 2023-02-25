@@ -13,25 +13,29 @@ function AddOnItem(props) {
 
     const handleCheck = () => {
         let currentIndex = props.index
-        console.log('current index from handle check', currentIndex )
+        console.log('current index from handle check', currentIndex)
         setChecked(() => !checked)
         let newAddOnsData = [...addOns]
-        newAddOnsData[currentIndex] = {...newAddOnsData[currentIndex], selected: !newAddOnsData[currentIndex].selected}
+        newAddOnsData[currentIndex] = { ...newAddOnsData[currentIndex], selected: !newAddOnsData[currentIndex].selected }
         setAddOns(newAddOnsData)
 
     }
-    console.log('newData', addOns)
+    console.log('newData', addOns[props.index])
     console.log('checked from the item', checked)
 
     return (
         <Card addOn={true} outlined={true} checked={checked} selected={checked ? true : false}>
-            <div className={`${styles.addOn} ${'flexGroup'}`}>
-                <Checkbox setChecked={setChecked} checked={checked} onCheck={handleCheck} />
+            <div className={`${styles.addOn} ${'flexGroup'} ${styles.itemSpacing}`}>
                 <div>
-                    <h2>{props.name}</h2>
-                    <p>{props.description}</p>
+                    <div className={styles.checkBoxGroup}>
+                        <Checkbox setChecked={setChecked} checked={checked} onCheck={handleCheck} />
+                        <div>
+                            <h2>{props.name}</h2>
+                            <p>{props.description}</p>
+                        </div>
+                    </div>
                 </div>
-                {plan.yearly ? <p>+$10/yr</p> : <p>{addOns[props.index].costMo}</p>}
+                {plan.yearly ? <p className={styles.price}>{`+${addOns[props.index].priceYr}/yr`}</p> : <p className={styles.price}>{`+${addOns[props.index].priceMo}/mo`}</p>}
             </div>
         </Card>
     )
