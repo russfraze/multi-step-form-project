@@ -9,7 +9,7 @@ function AddOnList() {
 
     return (
         <div>
-            {addOns.map((addOn, index) => <AddOnItem name={addOn.name} description={addOn.description} costMo={addOn.costMo} costYr={addOn.costYr} index={index} />)}
+            {addOns.map((addOn, index) => <AddOnItem name={addOn.name} key={addOn.name} description={addOn.description} costMo={addOn.costMo} costYr={addOn.costYr} index={index} />)}
         </div>
     )
 }

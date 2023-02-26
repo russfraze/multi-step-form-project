@@ -117,15 +117,15 @@ export const FormProvider = ({ children }) => {
     const getAddOnsTotal = () => {
         let total = 0
 
-        if (addOns.onlineService) {
+        if (addOns[0].selected) {
             plan.yearly ? total += 10 : total += 1
         }
 
-        if (addOns.largerStorage) {
+        if (addOns[1].selected) {
             plan.yearly ? total += 20 : total += 2
         }
 
-        if (addOns.customProfile) {
+        if (addOns[2].selected) {
             plan.yearly ? total += 20 : total += 2
         }
 

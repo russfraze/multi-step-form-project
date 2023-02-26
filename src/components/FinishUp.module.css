@@ -1,7 +1,44 @@
-.reviewPanel {
+.summary {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.summary p, h2 {
+    font-size: 0.90rem;
+}
+
+
+.summaryPanel {
+    display: flex;
+    flex-direction: column;
     background-color: var(--clr-alabaster);
     border-radius: 0.5rem;
+    gap: 1rem;
+    padding: 1rem
 }
+
+.textGroup{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dividerLine {
+    height: 1px;
+    background-color: var(--clr-light-grey)
+}
+
+.total p{
+    padding: 0.5rem 1rem;
+
+}
+
+.totalCost {
+    color: var(--clr-purpleish-blue);
+    font-weight: var(--fw-bold)
+}
+
 
 .navBar{
     display: flex;
