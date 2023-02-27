@@ -1,3 +1,27 @@
+/* .personalInfo {
+display: flex;
+gap: 60px;
+} */
+
+
+.personalInfoData {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* min-width: 500px; */
+}
+
+.stepsNav {
+    display: none;
+
+    background-image: url('/Users/clairegill/Desktop/multi-step-form/src/assets/bg-sidebar-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 0.5rem;
+    /* overflow: hidden; */
+}
+
+
 .navBar{
     display: flex;
     justify-content: flex-end;
@@ -5,6 +29,26 @@
     position: fixed;
     width: 100vw;
     bottom: 0%;
+    right: 0%;
     background-color: var(--clr-white);
     padding: 1rem;
+}
+
+
+@media (min-width: 900px){
+
+    .personalInfoData {
+        min-width: 443px;
+        margin: 65px;
+    }
+ .personalInfo {
+     display: flex;
+     background-color: chartreuse;
+ }
+
+ .stepsNav {
+     display: flex;
+     min-height: 568px;
+     min-width: 274px;
+ }
 }

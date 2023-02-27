@@ -40,22 +40,28 @@ function PersonalInfoForm() {
 
             <form onSubmit={handleSubmit}>
                 <Card shadow={true} >
-                    <h1>Personal info</h1>
-                    <p>Please provide your name, email address, and phone number.</p>
 
-                    <div className='flexGroup__col'>
-                        <label htmlFor='name'>Name</label>
-                        <input ref={nameInputRef} type='text' id='name' placeholder='e.g. Stephen King' />
-                    </div>
+                    <div className={styles.personalInfo}>
+                        <div className={styles.stepsNav}></div>
+                        <div className={styles.personalInfoData}>
+                            <h1>Personal info</h1>
+                            <p>Please provide your name, email address, and phone number.</p>
 
-                    <div className='flexGroup__col'>
-                        <label>Email Address</label>
-                        <input ref={emailInputRef} type='email' id='email' placeholder='e.g. stephenking@lorem.com' />
-                    </div>
+                            <div className='flexGroup__col'>
+                                <label htmlFor='name'>Name</label>
+                                <input ref={nameInputRef} type='text' id='name' placeholder='e.g. Stephen King' />
+                            </div>
 
-                    <div className='flexGroup__col'>
-                        <label >Phone Number</label>
-                        <input ref={phoneInputRef} type='tel' id='phone' placeholder='e.g. +1 234 567 890' />
+                            <div className='flexGroup__col'>
+                                <label>Email Address</label>
+                                <input ref={emailInputRef} type='email' id='email' placeholder='e.g. stephenking@lorem.com' />
+                            </div>
+
+                            <div className='flexGroup__col'>
+                                <label >Phone Number</label>
+                                <input ref={phoneInputRef} type='tel' id='phone' placeholder='e.g. +1 234 567 890' />
+                            </div>
+                        </div>
                     </div>
                 </Card>
 

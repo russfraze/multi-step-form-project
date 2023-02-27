@@ -89,6 +89,13 @@ body {
   background-size: 100vw;
 }
 
+@media (min-width: 900px){
+  body {
+   
+    background-image: none;
+  }
+}
+
 h1 {
   font-size: 1.5rem;
   color: var(--clr-marine-blue)
@@ -160,3 +167,6 @@ button:active
 {
   background-color: var(--clr-pastel-blue);
 }
+
+
+
