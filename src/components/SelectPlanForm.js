@@ -38,30 +38,35 @@ function SelectPlanForm() {
     return (
         <div>
             <Card shadow={true}>
+                <div className={styles.selectPlan}>
+                    <div className={styles.stepsNav}></div>
+                    <div className={styles.planListData}>
+                        <div>
+                            <h1>Select your plan</h1>
+                            <p>You have the option of monthly or yearly billing.</p>
+                        </div>
 
-                <div>
-                <h1>Select your plan</h1>
-                <p>You have the option of monthly or yearly billing.</p>
-                </div>
 
-                
-                <PlanList yearly={checked}/>
+                        <PlanList yearly={checked} />
 
-                <div className={styles.switchCard}>
-                    <h2>Monthly</h2>
-                    <label>
-                        <Switch 
-                        onChange={handleChange} 
-                        checked={checked} 
-                        onColor={'#02295a'} 
-                        offColor={'#02295a'} 
-                        checkedIcon={false} 
-                        uncheckedIcon={false}
-                        
-                        handleDiameter={14}
-                        />
-                    </label>
-                    <h2>Yearly</h2>
+
+                        <div className={styles.switchCard}>
+                            <h2>Monthly</h2>
+                            <label>
+                                <Switch
+                                    onChange={handleChange}
+                                    checked={checked}
+                                    onColor={'#02295a'}
+                                    offColor={'#02295a'}
+                                    checkedIcon={false}
+                                    uncheckedIcon={false}
+
+                                    handleDiameter={14}
+                                />
+                            </label>
+                            <h2>Yearly</h2>
+                        </div>
+                    </div>
                 </div>
 
             </Card>

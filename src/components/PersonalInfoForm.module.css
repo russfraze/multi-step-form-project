@@ -1,7 +1,4 @@
-/* .personalInfo {
-display: flex;
-gap: 60px;
-} */
+
 
 
 .personalInfoData {
@@ -18,7 +15,6 @@ gap: 60px;
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 0.5rem;
-    /* overflow: hidden; */
 }
 
 
@@ -43,7 +39,7 @@ gap: 60px;
     }
  .personalInfo {
      display: flex;
-     background-color: chartreuse;
+     
  }
 
  .stepsNav {
@@ -51,4 +47,13 @@ gap: 60px;
      min-height: 568px;
      min-width: 274px;
  }
+
+ .navBar{
+    position: relative;
+    width: 443px;
+    bottom: 65px;
+    left: 380px;
+    
+    padding: 0;
+}
 }

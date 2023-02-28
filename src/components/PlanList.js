@@ -1,6 +1,7 @@
 import {useContext} from 'react'
 import PlanItem from './PlanItem'
 import FormContext from '../context/FormContext'
+import styles from './PlanList.module.css'
 
 
 function PlanList({yearly}) {
@@ -8,7 +9,7 @@ function PlanList({yearly}) {
     const {plans} = formCXT
 
     return (
-        <div>
+        <div className={styles.planList}>
             {plans.map((plan, index) => 
                 <PlanItem 
                 icon={plan.icon} 

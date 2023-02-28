@@ -32,11 +32,15 @@ function PickAddForm() {
     return (
         <div>
             <Card shadow={true}>
-                <h1>Pick add ons</h1>
-                <p>Add-ons help enhance your gaming experience.</p>
+                <div className={styles.addOns}>
+                    <div className={styles.stepsNav} ></div>
+                    <div className={styles.addOnsData}>
+                        <h1>Pick add ons</h1>
+                        <p>Add-ons help enhance your gaming experience.</p>
 
-                <AddOnList setOnlineService={setOnlineService} setLargerStorage={setLargerStorage} setCustomProfile={setCustomProfile} />
-
+                        <AddOnList setOnlineService={setOnlineService} setLargerStorage={setLargerStorage} setCustomProfile={setCustomProfile} />
+                    </div>
+                </div>
             </Card>
 
             <div className={styles.navBar}>

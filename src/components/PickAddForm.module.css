@@ -1,5 +1,5 @@
 /* delete addOn styles */
-.addOn {
+/* .addOn {
     align-content: space-between;
 }
 
@@ -15,8 +15,17 @@
 .addOnSelected {
     border: 1px;
     border-color: crimson;
-}
+} */
 
+
+.addOns {
+
+}
+.addOnsData {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
 .navBar{
     display: flex;
@@ -25,7 +34,50 @@
     position: fixed;
     width: 100vw;
     bottom: 0%;
+    right: 0%;
     background-color: var(--clr-white);
     padding: 1rem;
 }
 
+.stepsNav {
+    display: none;
+
+    background-image: url('/Users/clairegill/Desktop/multi-step-form/src/assets/bg-sidebar-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 0.5rem;
+}
+
+
+
+
+@media (min-width: 900px){
+
+
+
+    .addOnsData {
+        min-width: 443px;
+        margin: 65px;
+    }
+
+
+ .addOns {
+     display: flex;
+     
+ }
+
+ .stepsNav {
+     display: flex;
+     min-height: 568px;
+     min-width: 274px;
+ }
+
+ .navBar{
+    position: relative;
+    width: 443px;
+    bottom: 65px;
+    left: 380px;
+    
+    padding: 0;
+}
+}
