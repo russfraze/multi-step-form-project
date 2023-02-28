@@ -1,8 +1,46 @@
 .thankYou {
+    
+}
+
+
+
+.thankYouData {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 1rem;
     padding: 3rem 0;
+}
+
+
+
+
+.stepsNav {
+    display: none;
+
+    background-image: url('/Users/clairegill/Desktop/multi-step-form/src/assets/bg-sidebar-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 0.5rem;
+}
+
+@media (min-width: 900px){
+
+    .thankYouData {
+        min-width: 443px;
+        margin: 65px;
+    }
+ .thankYou {
+     display: flex;
+     
+ }
+
+ .stepsNav {
+     display: flex;
+     min-height: 568px;
+     min-width: 274px;
+ }
+
+
 }
