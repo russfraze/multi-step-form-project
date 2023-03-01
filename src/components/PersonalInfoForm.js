@@ -59,7 +59,6 @@ function PersonalInfoForm() {
 
     }
 
-    // const inputStyles = 'invalid'
     const nameInputStyles = enteredNameIsValid ? '' : 'invalid'
     const emailInputStyles = enteredEmailIsValid ? '' : 'invalid'
 
@@ -87,13 +86,18 @@ function PersonalInfoForm() {
                             </div>
 
                             <div className={`${'flexGroup__col'} ${emailInputStyles}`}>
-                                {enteredEmailIsValid ? '' : <label className={styles.error}>This field is required</label>}
-                                <label>Email Address</label>
+                                <div className={`${'flexGroup'} ${styles.spaceBetween}`}>
+                                    <label>Email Address</label>
+                                    {enteredEmailIsValid ? '' : <label className={styles.error}>This field is required</label>}
+                                </div>
                                 <input ref={emailInputRef} type='email' id='email' placeholder='e.g. stephenking@lorem.com' />
                             </div>
 
-                            <div className='flexGroup__col'>
-                                <label >Phone Number</label>
+                            <div className={`${'flexGroup__col'} ${emailInputStyles}`}>
+                                <div className={`${'flexGroup'} ${styles.spaceBetween}`}>
+                                    <label >Phone Number</label>
+                                    {enteredPhoneIsValid ? '' : <label className={styles.error}>This field is required</label>}
+                                </div>
                                 <input ref={phoneInputRef} type='tel' id='phone' placeholder='e.g. +1 234 567 890' />
                             </div>
                         </div>
