@@ -16,7 +16,7 @@
 .stepsNav {
     display: none;
 
-    background-image: url('/Users/clairegill/Desktop/multi-step-form/src/assets/bg-sidebar-desktop.svg');
+    /* background-image: url('/Users/clairegill/Desktop/multi-step-form/src/assets/bg-sidebar-desktop.svg'); */
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 0.5rem;
