@@ -140,6 +140,11 @@ input {
   color: var(--clr-cool-grey);
 }
 
+.invalid input {
+  border: 1px solid var(--clr-strawberry-red);
+  
+}
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--clr-cool-grey);
   font-size: 0.95rem;

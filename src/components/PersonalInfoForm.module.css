@@ -31,6 +31,13 @@
 }
 
 
+.error{
+    color: var(--clr-strawberry-red);
+    position: relative;
+    top: 18px;
+    left: 328px;
+}
+
 @media (min-width: 900px){
 
     .personalInfoData {
