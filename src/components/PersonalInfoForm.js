@@ -9,7 +9,7 @@ function PersonalInfoForm() {
     const [enteredNameIsValid, setEnteredNameIsValid] = useState(true)
     const [enteredEmailIsValid, setEnteredEmailIsValid] = useState(true)
     const [enteredPhoneIsValid, setEnteredPhoneIsValid] = useState(true)
-    
+
 
 
 
@@ -29,21 +29,21 @@ function PersonalInfoForm() {
         const enteredPhone = phoneInputRef.current.value
 
 
-        if(enteredName.trim() === ''){
+        if (enteredName.trim() === '') {
             setEnteredNameIsValid(false)
             return
         }
 
         setEnteredNameIsValid(true)
 
-        if(enteredEmail.trim() === ''){
+        if (enteredEmail.trim() === '') {
             setEnteredEmailIsValid(false)
             return
         }
 
         setEnteredEmailIsValid(true)
 
-        if(enteredPhone.trim() === '' || enteredPhone.trim().length < 10){
+        if (enteredPhone.trim() === '' || enteredPhone.trim().length < 10) {
             setEnteredPhoneIsValid(false)
             return
         }
@@ -79,8 +79,10 @@ function PersonalInfoForm() {
                             <p>Please provide your name, email address, and phone number.</p>
 
                             <div className={`${'flexGroup__col'} ${nameInputStyles}`}>
-                                {enteredNameIsValid ? '' : <label className={styles.error}>This field is required</label>}
-                                <label htmlFor='name'>Name</label>
+                                <div className={`${'flexGroup'} ${styles.spaceBetween}`}>
+                                    <label htmlFor='name'>Name</label>
+                                    {enteredNameIsValid ? '' : <label className={styles.error}>This field is required</label>}
+                                </div>
                                 <input ref={nameInputRef} type='text' id='name' placeholder='e.g. Stephen King' />
                             </div>
 

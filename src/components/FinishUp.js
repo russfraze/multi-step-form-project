@@ -7,7 +7,7 @@ import styles from './FinishUp.module.css'
 function FinishUp() {
     const formCTX = useContext(FormContext)
 
-    const { next, plan, addOns, planChoice, getPlanTotal, getAddOnsTotal } = formCTX
+    const { next, plan, addOns, planChoice, getPlanTotal, getAddOnsTotal, changeInfo } = formCTX
     const chosenPlan = planChoice[0].name
     const planTotal = getPlanTotal()
     const addOnsTotal = getAddOnsTotal()
@@ -27,7 +27,7 @@ function FinishUp() {
                                 <div className={styles.textGroup}>
                                     <div>
                                         <h2>{`${chosenPlan} ${plan.yearly ? '(Yearly)' : '(Monthly)'} `}</h2>
-                                        <p>Change</p>
+                                        <p onClick={changeInfo}>Change</p>
                                     </div>
                                     <h2>{`$${planTotal}${plan.yearly ? '/yr' : '/mo'}`}</h2>
 

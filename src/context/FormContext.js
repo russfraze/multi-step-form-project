@@ -96,6 +96,9 @@ export const FormProvider = ({ children }) => {
     const prev = () => setStep(step - 1)
 
 
+    const changeInfo = () => setStep(1)
+
+
     const planChoice = plans.filter((plan) => plan.selected === true)
 
     const getPlanTotal = () => {
@@ -161,6 +164,7 @@ export const FormProvider = ({ children }) => {
                 addOns: addOns,
                 getPlanTotal: getPlanTotal,
                 getAddOnsTotal: getAddOnsTotal,
+                changeInfo: changeInfo
 
             }}
         >

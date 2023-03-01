@@ -33,9 +33,12 @@
 
 .error{
     color: var(--clr-strawberry-red);
-    position: relative;
-    top: 18px;
-    left: 328px;
+   
+}
+
+.spaceBetween {
+    
+    justify-content: space-between;
 }
 
 @media (min-width: 900px){
