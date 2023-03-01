@@ -84,7 +84,7 @@ body {
   font-weight: var(--fw-regular);
 
   background-color: var(--clr-magnolia);
-  background-image: url('/Users/clairegill/Desktop/multi-step-form/src/assets/bg-sidebar-mobile.svg');
+  /* background-image: url('/Users/clairegill/Desktop/multi-step-form/src/assets/bg-sidebar-mobile.svg'); */
   background-repeat: no-repeat;
   background-size: 100vw;
 }
