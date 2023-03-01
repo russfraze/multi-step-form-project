@@ -3,7 +3,6 @@ function Button(props) {
         <button
             className={props.className}
             type={props.type}
-            className={props.styles}
             onClick={props.onClick}
         >
           {props.children}
