@@ -3,6 +3,7 @@ import { useContext, useRef, useState } from 'react'
 import Button from './UI/Button'
 import Card from './UI/Card'
 import styles from './PersonalInfoForm.module.css'
+import { ReactComponent as SidebarDesktop } from '../assets/bg-sidebar-desktop.svg'
 
 function PersonalInfoForm() {
     const formCXT = useContext(FormContext)
@@ -72,7 +73,9 @@ function PersonalInfoForm() {
                 <Card shadow={true} >
 
                     <div className={styles.personalInfo}>
-                        <div className={styles.stepsNav}></div>
+                        <div className={styles.stepsNav}>
+                            <SidebarDesktop />
+                        </div>
                         <div className={styles.personalInfoData}>
                             <h1>Personal info</h1>
                             <p>Please provide your name, email address, and phone number.</p>

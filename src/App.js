@@ -4,9 +4,11 @@ import MultiStepForm from './components/MultiStepForm'
 import { FormProvider } from './context/FormContext'
 
 
+
 function App() {
   return (
     <div className={styles.body}>
+      
       <FormProvider>
         <Steps />
 
