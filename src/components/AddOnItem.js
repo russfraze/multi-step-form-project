@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from 'react'
+import { useContext, useState } from 'react'
 import styles from './AddOnItem.module.css'
 import FormContext from '../context/FormContext'
 import Card from './UI/Card'
@@ -13,15 +13,12 @@ function AddOnItem(props) {
 
     const handleCheck = () => {
         let currentIndex = props.index
-        console.log('current index from handle check', currentIndex)
         setChecked(() => !checked)
         let newAddOnsData = [...addOns]
         newAddOnsData[currentIndex] = { ...newAddOnsData[currentIndex], selected: !newAddOnsData[currentIndex].selected }
         setAddOns(newAddOnsData)
 
     }
-    console.log('newData', addOns[props.index])
-    console.log('checked from the item', checked)
 
     return (
         <Card addOn={true} outlined={true} checked={checked} selected={checked ? true : false}>
