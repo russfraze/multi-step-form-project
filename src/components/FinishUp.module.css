@@ -1,3 +1,7 @@
+.finishContainer {
+    position: relative;
+}
+
 .summary {
     display: flex;
     flex-direction: column;
@@ -95,5 +99,9 @@
     left: 380px;
     
     padding: 0;
+}
+
+.finishContainer {
+    position: static;
 }
 }

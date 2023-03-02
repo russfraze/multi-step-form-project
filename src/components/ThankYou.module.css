@@ -1,4 +1,9 @@
 
+.thankYouContainer {
+    position: relative;
+}
+
+
 .thankYouData {
     display: flex;
     flex-direction: column;
@@ -35,6 +40,10 @@
      min-height: 568px;
      min-width: 274px;
  }
+
+ .thankYouContainer {
+    position: static;
+    }
 
 
 }

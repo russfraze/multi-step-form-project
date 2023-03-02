@@ -20,7 +20,7 @@ function PickAddForm() {
     
 
     return (
-        <div>
+        <div className={styles.addOnsContainer}>
             <Card shadow={true}>
                 <div className={styles.addOns}>
                     <div className={styles.stepsNav} >

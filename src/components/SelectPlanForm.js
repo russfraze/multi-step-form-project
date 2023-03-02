@@ -37,7 +37,8 @@ function SelectPlanForm() {
     }
 
     return (
-        <div>
+        <div className={styles.selectContainer}>
+            
             <Card shadow={true}>
                 <div className={styles.selectPlan}>
                     <div className={styles.stepsNav}>

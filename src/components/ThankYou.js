@@ -7,21 +7,23 @@ import { ReactComponent as SidebarDesktop } from '../assets/bg-sidebar-desktop.s
 
 function ThankYou() {
     return (
-        <Card>
-            <div className={styles.thankYou}>
-                <div className={styles.stepsNav}>
-                    <SidebarDesktop />
-                </div>
-                <div className={styles.thankYouData}>
-                    <ThankYouIcon height={55} />
-                    <h1>Thank you!</h1>
-                    <p>Thanks for confirming your subscription!
-                    We hope you have fun using out platform. If you need
-                    support, please feel free to email us at support@loremgaming.com.
+        <div className={styles.thankYouContainer}>
+            <Card>
+                <div className={styles.thankYou}>
+                    <div className={styles.stepsNav}>
+                        <SidebarDesktop />
+                    </div>
+                    <div className={styles.thankYouData}>
+                        <ThankYouIcon height={55} />
+                        <h1>Thank you!</h1>
+                        <p>Thanks for confirming your subscription!
+                        We hope you have fun using out platform. If you need
+                        support, please feel free to email us at support@loremgaming.com.
                 </p>
+                    </div>
                 </div>
-            </div>
-        </Card>
+            </Card>
+        </div>
     )
 }
 

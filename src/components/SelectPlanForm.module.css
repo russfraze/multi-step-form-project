@@ -1,3 +1,8 @@
+.selectContainer {
+    position: relative;
+}
+
+
 .navBar{
     display: flex;
     justify-content: space-between;
@@ -68,5 +73,9 @@
     left: 380px;
     
     padding: 0;
+}
+
+.selectContainer {
+    position: static;
 }
 }

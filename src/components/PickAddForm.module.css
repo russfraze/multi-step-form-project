@@ -18,8 +18,8 @@
 } */
 
 
-.addOns {
-
+.addOnsContainer {
+    position: relative;
 }
 .addOnsData {
     display: flex;
@@ -80,4 +80,9 @@
     
     padding: 0;
 }
+
+.addOnsContainer {
+    position: static;
+}
+
 }

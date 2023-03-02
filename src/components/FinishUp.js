@@ -15,7 +15,7 @@ function FinishUp() {
     const monthlyTotal = planTotal + addOnsTotal
 
     return (
-        <div>
+        <div className={styles.finishContainer}>
             <Card shadow={true}>
                 <div className={styles.finishUp}>
                     <div className={styles.stepsNav}>
