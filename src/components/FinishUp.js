@@ -3,6 +3,7 @@ import FormContext from '../context/FormContext'
 import Button from './UI/Button'
 import Card from './UI/Card'
 import styles from './FinishUp.module.css'
+import { ReactComponent as SidebarDesktop } from '../assets/bg-sidebar-desktop.svg'
 
 function FinishUp() {
     const formCTX = useContext(FormContext)
@@ -17,7 +18,9 @@ function FinishUp() {
         <div>
             <Card shadow={true}>
                 <div className={styles.finishUp}>
-                    <div className={styles.stepsNav}></div>
+                    <div className={styles.stepsNav}>
+                        <SidebarDesktop />
+                    </div>
                     <div className={styles.finishUpData}>
                         <h1>Finishing up</h1>
                         <p>Double check everything looks OK before confirming.</p>

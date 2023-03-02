@@ -1,0 +1,19 @@
+.backgroundImage {
+    height: 200px;
+    width: 100vw;
+    position: fixed;
+    top: 0%;
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+
+}
+
+
+@media (min-width: 900px){
+
+    .backgroundImage {
+        display: none;
+    }
+}
+

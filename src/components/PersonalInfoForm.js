@@ -5,6 +5,7 @@ import Card from './UI/Card'
 import styles from './PersonalInfoForm.module.css'
 import { ReactComponent as SidebarDesktop } from '../assets/bg-sidebar-desktop.svg'
 
+
 function PersonalInfoForm() {
     const formCXT = useContext(FormContext)
     const [enteredNameIsValid, setEnteredNameIsValid] = useState(true)
@@ -66,10 +67,10 @@ function PersonalInfoForm() {
     return (
 
 
-        <div>
 
 
-            <form onSubmit={handleSubmit}>
+        
+            <form onSubmit={handleSubmit} className={styles.formContainer}>
                 <Card shadow={true} >
 
                     <div className={styles.personalInfo}>
@@ -107,12 +108,15 @@ function PersonalInfoForm() {
                     </div>
                 </Card>
 
+
                 <div className={styles.navBar}>
                     <Button>Next Step</Button>
                 </div>
 
             </form>
-        </div>
+
+
+        
 
 
     )

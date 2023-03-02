@@ -5,6 +5,7 @@
     /* align-items: flex-start; */
     height: 100px;
     gap: 1rem;
+    position: relative;
 }
 
 .stepGroup  {
@@ -55,7 +56,9 @@
     position: relative;
     top: 200px;
     right: 95px;
-    height: none;  
+    height: none; 
+    
+    
    }
 
    .stepText{

@@ -1,4 +1,17 @@
 
+/* background component stuff */
+
+
+
+
+.formContainer {
+    position: relative;
+}
+
+
+
+
+
 
 
 .personalInfoData {
@@ -50,16 +63,31 @@
 
  .stepsNav {
      display: flex;
+     
      min-height: 568px;
      min-width: 274px;
  }
 
- .navBar{
+    .navBar {
     position: relative;
     width: 443px;
     bottom: 65px;
     left: 380px;
-    
+
     padding: 0;
+    }
+
+    .formContainer {
+
+        position: static;
+    
+    }
+
 }
-}
+
+
+
+
+
+
+

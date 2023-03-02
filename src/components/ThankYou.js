@@ -1,6 +1,7 @@
 import Card from '../components/UI/Card'
 import { ReactComponent as ThankYouIcon } from '../assets/icon-thank-you.svg'
 import styles from './ThankYou.module.css'
+import { ReactComponent as SidebarDesktop } from '../assets/bg-sidebar-desktop.svg'
 
 
 
@@ -8,7 +9,9 @@ function ThankYou() {
     return (
         <Card>
             <div className={styles.thankYou}>
-                <div className={styles.stepsNav}></div>
+                <div className={styles.stepsNav}>
+                    <SidebarDesktop />
+                </div>
                 <div className={styles.thankYouData}>
                     <ThankYouIcon height={55} />
                     <h1>Thank you!</h1>

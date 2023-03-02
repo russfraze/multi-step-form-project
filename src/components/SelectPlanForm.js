@@ -5,6 +5,7 @@ import Card from './UI/Card'
 import PlanList from './PlanList'
 import Switch from "react-switch"
 import styles from './SelectPlanForm.module.css'
+import { ReactComponent as SidebarDesktop } from '../assets/bg-sidebar-desktop.svg'
 
 
 function SelectPlanForm() {
@@ -39,7 +40,9 @@ function SelectPlanForm() {
         <div>
             <Card shadow={true}>
                 <div className={styles.selectPlan}>
-                    <div className={styles.stepsNav}></div>
+                    <div className={styles.stepsNav}>
+                        <SidebarDesktop />
+                    </div>
                     <div className={styles.planListData}>
                         <div>
                             <h1>Select your plan</h1>
