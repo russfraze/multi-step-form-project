@@ -14,7 +14,7 @@ function MultiStepForm() {
     const { step } = formCXT
 
     return (
-        <div className={styles.multiForm}>
+        <main className={styles.multiForm}>
             {(step === 1 && <PersonalInfoForm />) ||
                 (step === 2 && <SelectPlanForm />) ||
                 (step === 3 && <PickAddForm /> )||
@@ -22,7 +22,7 @@ function MultiStepForm() {
                 (step === 5 && <ThankYou />)
             }
 
-        </div>
+        </main>
     )
 }
 
