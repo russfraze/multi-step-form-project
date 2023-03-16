@@ -8,7 +8,7 @@ function Steps() {
     const { step } = formCXT
 
     return (
-        <div className={styles.steps}>
+        <article className={styles.steps}>
             <div className={styles.stepGroup}>
                 <div className={`${styles.step} ${step === 1 ? styles.selected : ''}`}>1</div>
                 <div className={styles.stepText}>
@@ -37,7 +37,7 @@ function Steps() {
                     <h2>SUMMARY</h2>
                 </div>
             </div>
-        </div>
+        </article>
     )
 }
 
