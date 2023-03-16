@@ -91,7 +91,7 @@ function PersonalInfoForm() {
 
                             <div className={`${'flexGroup__col'} ${emailInputStyles}`}>
                                 <div className={`${'flexGroup'} ${styles.spaceBetween}`}>
-                                    <label>Email Address</label>
+                                    <label htmlFor='email'>Email Address</label>
                                     {enteredEmailIsValid ? '' : <label className={styles.error}>This field is required</label>}
                                 </div>
                                 <input ref={emailInputRef} type='email' id='email' placeholder='e.g. stephenking@lorem.com' />
@@ -99,7 +99,7 @@ function PersonalInfoForm() {
 
                             <div className={`${'flexGroup__col'} ${emailInputStyles}`}>
                                 <div className={`${'flexGroup'} ${styles.spaceBetween}`}>
-                                    <label >Phone Number</label>
+                                    <label htmlFor='phone'>Phone Number</label>
                                     {enteredPhoneIsValid ? '' : <label className={styles.error}>This field is required</label>}
                                 </div>
                                 <input ref={phoneInputRef} type='tel' id='phone' placeholder='e.g. +1 234 567 890' />
