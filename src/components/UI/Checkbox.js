@@ -5,8 +5,8 @@ import React from 'react'
 const Checkbox = ({setChecked, checked, onCheck}) => {
     const checkBoxStyles = `${styles.checkbox} ${checked ? styles.boxChecked : ''}`
     return (
-        <div className={checkBoxStyles}>
-            <CheckMark onClick={onCheck}/>
+        <div className={checkBoxStyles} onClick={onCheck}>
+            <CheckMark />
         </div>
     )
 }
