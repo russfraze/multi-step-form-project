@@ -2,16 +2,11 @@
 .card {
     display: flex;
     flex-direction: column;
-    
     background-color: var(--clr-white);
     border-radius: 0.5rem;
     padding: 1.5rem;
     margin: 0 1rem;
-    /* max-width: 600px; */
 }
-
-
-
 
 .clickable {
     margin: 0.75rem 0.25rem;

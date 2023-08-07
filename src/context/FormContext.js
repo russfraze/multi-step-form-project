@@ -80,7 +80,6 @@ export const FormProvider = ({ children }) => {
     const [plan, setPlan] = useState(planInitialState)
     const [plans, setPlans] = useState(plansInitialState)
     const [addOns, setAddOns] = useState(addOnsInitialState)
-    console.log('from context', personalInfo, plans, addOns)
 
     const [step, setStep] = useState(1)
     const next = () => {
@@ -95,28 +94,23 @@ export const FormProvider = ({ children }) => {
 
     const prev = () => setStep(step - 1)
 
-
     const changeInfo = () => setStep(1)
-
 
     const planChoice = plans.filter((plan) => plan.selected === true)
 
     const getPlanTotal = () => {
-        console.log('plan choince from context',planChoice)
         let planCost = 0
-        console.log( 'pllllll',plan.yearly)
+        
         if(plan.yearly){
             planCost = planChoice[0].costYr
         } else {
             planCost = planChoice[0].costMo
         }
-        console.log('plan Cost baby', planCost)
+        
         return planCost
     }
 
     
-
-
     const getAddOnsTotal = () => {
         let total = 0
 
@@ -136,14 +130,6 @@ export const FormProvider = ({ children }) => {
         return total
 
     }
-
-    console.log('get add ons from COnt', getAddOnsTotal())
-
-
-    
-    
-
-
 
     return (
         <FormContext.Provider
