@@ -2,30 +2,20 @@
 /* background component stuff */
 
 
-
-
 .formContainer {
     position: relative;
 }
-
-
-
-
-
-
 
 .personalInfoData {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    /* min-width: 500px; */
 }
 
 .stepsNav {
     display: none;
     border-radius: 0.5rem;
 }
-
 
 .navBar{
     display: flex;
@@ -38,7 +28,6 @@
     background-color: var(--clr-white);
     padding: 1rem;
 }
-
 
 .error{
     color: var(--clr-strawberry-red);

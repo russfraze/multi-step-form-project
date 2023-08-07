@@ -24,8 +24,6 @@ function SelectPlanForm() {
             setChecked(false)
         }
     }
-    console.log(checked)
-
 
     const handleSubmit = () => {
         setPlan((prevState) => ({

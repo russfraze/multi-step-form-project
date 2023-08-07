@@ -4,10 +4,6 @@ import MultiStepForm from './components/MultiStepForm'
 import { FormProvider } from './context/FormContext'
 import BackgroundImage from './components/BackgroundImage'
 
-
-
-
-
 function App() {
   return (
     <div className={styles.body}>
